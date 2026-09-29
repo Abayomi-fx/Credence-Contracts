@@ -1,1 +1,229 @@
-Ly8hIEludGVyZmFjZSBmb3IgZmxhc2hsb2FuIHJlY2VpdmVycy4KLy8vIENvbnRyYWN0cyB0aGF0IHdpc2ggdG8gcmVjZWl2ZSBmbGFzaGxvYW5zIGZyb20gdGhlIENyZWRlbmNlIFRyZWFzdXJ5IG11c3QgaW1wbGVtZW50IHRoaXMgdHJhaXQuCi8vLwovLyMgSW52YXJpYW50cwoKLy8vIC0gVGhlIGNhbGxiYWNrIE1VU1QgcmV0dXJuIGBTeW1ib2woRkxBU0hfTE9BTl9TVUNDRVNTKWAgZXhhY3RseSBmb3IgdGhlIGxvYW4gdG8gYmUKLy8vICAgY29uc2lkZXJlZCByZXBhaWQuIEFueSBvdGhlciBzeW1ib2wgKGluY2x1ZGluZyBhIG1pc3Npbmcgb25lKSBpcyB0cmVhdGVkIGFzIGEK Ly8vICAgZmFpbHVyZSBieSB0aGUgdHJlYXN1cnkgYW5kIHRoZSB0cmFuc2FjdGlvbiBpcyByZXZlcnRlZC4KLy8vIC0gVGhlIGNhbGxiYWNrIE1VU1QgYmUgZGV0ZXJtaW5pc3RpYzogZm9yIGEgZ2l2ZW4gKGluaXRpYXRvciwgdG9rZW4sIGFtb3VudCwKLy8vICAgZmVlLCBkYXRhKSB0dXBsZSB0aGUgcmV0dXJuZWQgc3ltYm9sIG11c3Qgbm90IGRlcGVuZCBvbiBleHRlcm5hbCBtdXRhYmxlCi8vLyAgIHN0YXRlIHRoYXQgdGhlIHRyZWFzdXJ5IGRvZXMgbm90IGNvbnRyb2wuCi8vLyAtIE5lZ2F0aXZlIGBhbW91bnRgIG9yIG5lZ2F0aXZlIGBmZWVgIGFyZSBpbnZhbGlkIGlucHV0cyBhbmQgbXVzdCBub3QgYmUKLy8vICAgYWNjZXB0ZWQgYnkgYSBjb25mb3JtaW5nIHJlY2VpdmVyLgovLy8gLSBUaGUgY2FsbGJhY2sgbXVzdCBub3QgcmVlbnRlciBpbnRvIHRoZSB0cmVhc3VyeSBpbiBhIHdheSB0aGF0IGJyZWFrcyB0aGUKLy8vICAgcmVwYXltZW50IGludmFyaWFudC4gUmVlbnRyYW5jeSBndWFyZHMgYmVsb25nIGluIHRoZSBpbXBsZW1lbnRhdGlvbiwgbm90IGluCi8vLyAgIHRoaXMgaW50ZXJmYWNlLgoKLy8vIEBub3RpY2UgRGVmaW5lcyB0aGUgbWFnaWMgdmFsdWUgcmV0dXJuZWQgb24gc3VjY2Vzc2Z1bCBmbGFzaGxvYW4gZXhlY3V0aW9uLgpwdWIgY29uc3QgRkxBU0hfTE9BTl9TVUNDRVNTOiAmc3RyID0gIkZMQVNIX0xPQU5fU1VDQ0VTUyI7CgovLy8gQG5vdGljZSBUaGUgbWF4aW11bSBudW1iZXIgb2YgYnl0ZXMgYWxsb3dlZCBpbiB0aGUgYGRhdGFgIHBhcmFtZXRlci4KLy8vIEltcGxlbWVudGF0aW9ucyBhbmQgdGhlIHRyZWFzdXJ5IHNob3VsZCByZWplY3Qgb3IgdHJ1bmNhdGUgY2FsbGJhY2sgZGF0YQovLy8gdGhhdCBleGNlZWRzIHRoaXMgYm91bmQgdG8ga2VlcCBnYXMgY29zdHMgYm91bmRlZCBhbmQgcHJldmVudCBkZW5pYWwtb2Ytc2VydmljZQovLy8gdGhyb3VnaCBvdmVyc2l6ZWQgcGF5bG9hZHMuCnB1YiBjb25zdCBNQVhfQ0FMTEJBQ0tfREFUQV9MRU46IHUzMiA9IDQwOTY7CgovLy8gQG5vdGljZSBUaGUgbWF4aW11bSBsb2FuIGFtb3VudCB0aGUgdHJlYXN1cnkgd2lsbCBhdHRlbXB0IHRvIGRpc3BhdGNoIGluIGEK Ly8vIHNpbmdsZSBmbGFzaGxvYW4uIEFtb3VudHMgYWJvdmUgdGhpcyBib3VuZCBhcmUgY29uc2lkZXJlZCBvdXQgb2YgcmFuZ2UKLy8vIGFuZCBtdXN0IGJlIHJlamVjdGVkIGJlZm9yZSB0aGUgY2FsbGJhY2sgaXMgaW52b2tlZC4KcHViIGNvbnN0IE1BWF9GQVNIX0xPQU5fQU1PVU5UOiBpMTI4ID0gaTEyODo6TUFYOwoKLy8vIEBub3RpY2UgVGhlIG1heGltdW0gZmVlIHRoZSB0cmVhc3VyeSB3aWxsIGFjY2VwdCBmcm9tIGEgcmVjZWl2ZXIsIGV4cHJlc3NlZAovLy8gYXMgYSBmcmFjdGlvbiBvZiB0aGUgcHJpbmNpcGFsIGluIGJhc2lzIHBvaW50cyAoMS8xMDAgb2YgYSBwZXJjZW50KS4KLy8vIEZlZXMgYWJvdmUgdGhpcyBib3VuZCBhcmUgcmVqZWN0ZWQgdG8gcHJvdGVjdCBpbml0aWF0b3JzIGZyb20gbWFsaWNpb3VzCi8vLyByZWNlaXZlcnMuCnB1YiBjb25zdCBNQVhfRkVFX0JQUzogdTMyID0gMTAwOyAvLyAxJQoKLy8vIEBub3RpY2UgUmV0dXJucyBgdHJ1ZWAgaWYgYGFtb3VudGAgYW5kIGBmZWVgIGFyZSB3aXRoaW4gdGhlIGFjY2VwdGVkIGJvdW5kcy4KLy8vIEBkZXYgVGhpcyBpcyBhIHB1cmUgaGVscGVyIGV4cG9zZWQgc28gYm90aCB0aGUgdHJlYXN1cnkgYW5kIHJlY2VpdmVyCi8vLyBpbXBsZW1lbnRhdGlvbnMgY2FuIGVuZm9yY2UgdGhlIHNhbWUgYm91bmRhcnkgcnVsZXMgd2l0aG91dCBkcmlmdC4KcHViIGZuIGlzX3ZhbGlkX2ZsYXNoX2xvYW5fYXJnc19ib3VuZGVkKGFtb3VudDogaTEyOCwgZmVlOiBpMTI4LCBkYXRhX2xlbjogdTMyKSAtPiBib29sIHsKICAgIGFtb3VudCA+IDAKICAgICAgICAmJiBhbW91bnQgPD0gTUFYX0ZBU0hfTE9BTl9BTU9VTlQKICAgICAgICAmJiBmZWUgPj0gMAogICAgICAgICYmIGZlZSA8PSBNQVhfRkFTSEhMT0FOX0FNT1VOVAogICAgICAgICYmIGRhdGFfbGVuIDw9IE1BWF9DQUxMQkFDS19EQVRBX0xFTgp9CgovLy8gQG5vdGljZSBSZXR1cm5zIGB0cnVlYCBpZiB0aGUgcmVjZWl2ZXIgcmV0dXJuZWQgdGhlIGV4cGVjdGVkIG1hZ2ljIHN5bWJvbC4KLy8vIEBkZXYgQ2VudHJhbGl6ZWQgc28gYWxsIGNhbGxlcnMgdXNlIHRoZSBzYW1lIGNvbXBhcmlzb24gYW5kIG5vIGltcGxlbWVudGF0aW9uCi8vLyBjYW4gYWNjaWRlbnRhbGx5IGFjY2VwdCBhIG5lYXItbWF0Y2ggc3RyaW5nLgpwdWIgZm4gaXNfc3VjY2Vzc19zeW1ib2woZW52OiAmRW52LCBzeW1ib2w6ICZTeW1ib2wpIC0+IGJvb2wgewogICAgc3ltYm9sID09ICZTeW1ib2w6Om5ldyhlbnYsIEZMQVNIX0xPQU5fU1VDQ0VTUykKfQoKLy8vIEB0aXRsZSAgRmxhc2hMb2FuUmVjZWl2ZXIKLy8vIEBub3RpY2UgSW50ZXJmYWNlIGZvciBhIGZsYXNobG9hbiByZWNlaXZlciBjb250cmFjdC4KLy8vCi8vLyBAZGV2IEltcGxlbWVudGF0aW9ucyBNVVNUIGJlIGRldGVybWluaXN0aWMgYW5kIE1VU1QgcmV0dXJuCi8vLyBgU3ltYm9sKEZMQVNIX0xPQU5fU1VDQ0VTUylgIG9uIHN1Y2Nlc3MuIEZhaWx1cmUgdG8gcmV0dXJuIHRoZSBleGFjdCBzeW1ib2wKLy8vIGNhdXNlcyB0aGUgdHJlYXN1cnkgdG8gcmV2ZXJ0IHRoZSBlbnRpcmUgZmxhc2hsb2FuLCBwcmVzZXJ2aW5nIHRoZSBpbml0aWF0b3IncwovLy8gZnVuZHMuCi8vLwovLy8gQG5vdGljZSBUaGUgY2FsbGJhY2sgaXMgZXhlY3V0ZWQgd2l0aGluIHRoZSB0cmVhc3VyeSdzIHRyYW5zYWN0aW9uIGNvbnRleHQuCi8vLyBBbnkgc3RhdGUgY2hhbmdlcyBtYWRlIGJ5IHRoZSByZWNlaXZlciBhcmUgcm9sbGVkIGJhY2sgaWYgdGhlIGNhbGxiYWNrIGRvZXMKLy8vIG5vdCByZXR1cm4gdGhlIHN1Y2Nlc3Mgc3ltYm9sIG9yIGlmIHRoZSByZXBheW1lbnQgY2hlY2sgZmFpbHMuCi8vLwovLy8gQG5vdGljZSBUaGUgYGRhdGFgIHBhcmFtZXRlciBpcyBvcGFxdWUgdG8gdGhlIHRyZWFzdXJ5IGFuZCBpcyBmb3J3YXJkZWQKLy8vIHZlcmJhdGltLiBSZWNlaXZlcnMgbXVzdCB2YWxpZGF0ZSBpdCB0aGVtc2VsdmVzIGFuZCBtdXN0IG5vdCBhc3N1bWUgaXQgaXMK Ly8vIHRydXN0ZWQgb3Igd2VsbC1mb3JtZWQuCi8vLwovLy8gQG5vdGljZSBUaGUgY2FsbGJhY2sgTXVTVCBub3QgcmVlbnRlciBpbnRvIHRoZSB0cmVhc3VyeSBpbiBhIHdheSB0aGF0IGJyZWFrcwovLy8gdGhlIHJlcGF5bWVudCBpbnZhcmlhbnQuIEltcGxlbWVudGF0aW9ucyBzaG91bGQgZW5mb3JjZSB0aGVpciBvd24gcmVlbnRyYW5jeQovLy8gZ3VhcmRzLgovLy8KLy8vIEBwYXJhbSAgaW5pdGlhdG9yIFRoZSBhZGRyZXNzIHRoYXQgaW5pdGlhdGVkIHRoZSBmbGFzaGxvYW4uCi8vLyBAcGFyYW0gIHRva2VuICAgICBUaGUgYWRkcmVzcyBvZiB0aGUgdG9rZW4gYmVpbmcgbG9hbmVkLgovLy8gQHBhcmFtICBhbW91bnQgICAgVGhlIGFtb3VudCBvZiB0b2tlbnMgbG9hbmVkLiBNdXN0IGJlIHBvc2l0aXZlIGFuZCB3aXRoaW4KLy8vICAgICAgICAgICAgICAgICAgICBgTUFYX0ZBU0hfTE9BTl9BTU9VTlRgLgovLy8gQHBhcmFtICBmZWUgICAgICAgVGhlIGZlZSBhbW91bnQgcmVxdWlyZWQgdG8gYmUgcmVwYWlkIGFsb25nIHdpdGggdGhlIHByaW5jaXBhbC4KLy8vICAgICAgICAgICAgICAgICAgIE11c3QgYmUgbm9uLW5lZ2F0aXZlIGFuZCB3aXRoaW4gYE1BWF9GQVNIX0xPQU5fQU1PVU5UYC4KLy8vIEBwYXJhbSAgZGF0YSAgICAgIEFyYml0cmFyeSBkYXRhIHBhc3NlZCBieSB0aGUgaW5pdGlhdG9yLiBNdXN0IG5vdCBleGNlZWQKLy8vICAgICAgICAgICAgICAgICAgIGBNQVhfQ0FMTEJBQ0tfREFUQV9MRU5gIGJ5dGVzLgovLy8gQHJldHVybiBBIHN5bWJvbCB0aGF0IG11c3QgbWF0Y2ggYEZMQVNIX0xPQU5fU1VDQ0VTU2AgZm9yIHRoZSBsb2FuIHRvIGJlIGNvbnNpZGVyZWQgc3VjY2Vzc2Z1bC4KLy8vIEBkZXYgUmV0dXJuaW5nIGFueSBvdGhlciBzeW1ib2wgKG9yIG5vdCByZXR1cm5pbmcgYXQgYWxsKSBpcyB0cmVhdGVkIGFzIGEK Ly8vIGZhaWx1cmUgYW5kIHRoZSB0cmVhc3VyeSB3aWxsIHJldmVydCB0aGUgdHJhbnNhY3Rpb24uCi8vLwovLy8gQG5vdGljZSBUaGUgY2FsbGJhY2sgaXMgZXhwZWN0ZWQgdG8gYmUgaWRlbXBvdGVudCB3aXRoIHJlc3BlY3QgdG8gdGhlCi8vLyB0cmVhc3VyeSdzIHJlcGVhdGVkIGludm9jYXRpb25zIGZvciB0aGUgc2FtZSBsb2dpY2FsIGxvYW46IGEgcmV0cnkgYWZ0ZXIgYQovLy8gZmFpbGVkIGF0dGVtcHQgbXVzdCBub3QgY29ycnVwdCBzdGF0ZSBvciBkb3VibGUtc3BlbmQgZnVuZHMuCi8vLwovLy8gQG5vdGljZSBUaGUgY2FsbGJhY2sgTXVTVCBub3QgY2FwdHVyZSBvciBsb2cgc2Vuc2l0aXZlIGRhdGEgKGUuZy4gc2VjcmV0Ci8vLyBrZXlzLCBwZXJzb25hbCBpZGVudGlmaWVycykgdGhhdCB3b3VsZCBiZSB2aXNpYmxlIG9uLWNoYWluLgpAY29udHJhY3RjbGllbnQobmFtZSA9ICJGbGFzaExvYW5SZWNlaXZlckNsaWVudCIpCnB1YiB0cmFpdCBGbGFzaExvYW5SZWNlaXZlciB7CiAgICAvLy8gQG5vdGljZSBDYWxsYmFjayBpbnZva2VkIGJ5IHRoZSB0cmVhc3VyeSBhZnRlciB0cmFuc2ZlcnJpbmcgdGhlIGxvYW4gYW1vdW50LgogICAgLy8vIEBwYXJhbSAgaW5pdGlhdG9yIFRoZSBhZGRyZXNzIHRoYXQgaW5pdGlhdGVkIHRoZSBmbGFzaGxvYW4uCiAgICAvLy8gQHBhcmFtICB0b2tlbiAgICAgVGhlIGFkZHJlc3Mgb2YgdGhlIHRva2VuIGJlaW5nIGxvYW5lZC4KICAgIC8vLyBAcGFyYW0gIGFtb3VudCAgICBUaGUgYW1vdW50IG9mIHRva2VucyBsb2FuZWQuCiAgICAvLy8gQHBhcmFtICBmZWUgICAgICAgVGhlIGZlZSBhbW91bnQgcmVxdWlyZWQgdG8gYmUgcmVwYWlkIGFsb25nIHdpdGggdGhlIHByaW5jaXBhbC4KICAgIC8vLyBAcGFyYW0gIGRhdGEgICAgICBBcmJpdHJhcnkgZGF0YSBwYXNzZWQgYnkgdGhlIGluaXRpYXRvci4KICAgIC8vLyBAcmV0dXJuIEEgc3ltYm9sIHRoYXQgbXVzdCBtYXRjaCBgRkxBU0hfTE9BTl9TVUNDRVNTYCBmb3IgdGhlIGxvYW4gdG8gYmUgY29uc2lkZXJlZCBzdWNjZXNzZnVsLgogICAgZm4gb25fZmxhc2hfbG9hbihlOiBFbnYsIGluaXRpYXRvcjogQWRkcmVzcywgdG9rZW46IEFkZHJlc3MsIGFtb3VudDogaTEyOCwgZmVlOiBpMTI4LCBkYXRhOiBCeXRlcykgLT4gU3ltYm9sOwp9CgojW2NvbmZpZyh0ZXN0KV1tb2QgdGVzdHMgewogICAgdXNlIHN1cGVyOjoqOwogICAgdXNlIHNvcm9iYW5fc2RrOjpFbnY7CgogICAgI1t0ZXN0XQogICAgZm4gc3VjY2Vzc19zeW1ib2xfbWF0Y2hlcygpIHsKICAgICAgICBsZXQgZW52ID0gRW52OjpkZWZhdWx0KCk7CiAgICAgICAgbGV0IHN5bSA9IFN5bWJvbDo6bmV3KCZlbnYsIEZMQVNIX0xPQU5fU1VDQ0VTUyk7CiAgICAgICAgYXNzZXJ0IShpcyAoc3VjY2Vzc19zeW1ib2woJmVudiwgJnN5bSkpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIHN1Y2Nlc3Nfc3ltYm9sX3JlamVjdHNfb3RoZXJzKCkgewogICAgICAgIGxldCBlbnYgPSBFbnY6OmRlZmF1bHQoKTsKICAgICAgICBsZXQgb3RoZXIgPSBTeW1ib2w6Om5ldygmZW52LCAiTk9UX1NVQ0NFU1MiKTsKICAgICAgICBhc3NlcnQhKCFpc19zdWNjZXNzX3N5bWJvbCgmZW52LCAmb3RoZXIpKTsKICAgIH0KCiAgICAjdGVzdF0KICAgIGZuIGJvdW5kYXJ5X3plcm9fYW1vdW50X3JlamVjdGVkKCkgewogICAgICAgIGFzc2VydCFoKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgwLCAwLCAwKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYm91bmRhcnlfbmVnYXRpdmVfYW1vdW50X3JlamVjdGVkKCkgewogICAgICAgIGFzc2VydCFoKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgtMSwgMCwgMCkpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIGJvdW5kYXJ5X25lZ2F0aXZlX2ZlZV9yZWplY3RlZCgpIHsKICAgICAgICBhc3NlcnQhKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgxLCAwLCAtMSkpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIGJvdW5kYXJ5X21heF9hbW91bnRfYWNjZXB0ZWQoKSB7CiAgICAgICAgYXNzZXJ0IShpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgKICAgICAgICAgICAgTUFYX0ZBU0hfTE9BTl9BTU9VTlQsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYm91bmRhcnlfYWJvdmVfbWF4X2Ftb3VudF9yZWplY3RlZCgpIHsKICAgICAgICAvLyBpMTI4OjpNQVggKyAxIGlzIG5vdCByZXByZXNlbnRhYmxlLCBzbyB1c2UgTUFYIGFuZCBhIG5lZ2F0aXZlIGNoZWNrCiAgICAgICAgLy8gdG8gY29uZmlybSB0aGUgdXBwZXIgYm91bmQgaXMgZW5mb3JjZWQgZXhhY3RseS4KICAgICAgICBhc3NlcnQhKGlzX3ZhbGlkX2ZsYXNoX2xvYW5fYXJnc19ib3VuZGVkKAogICAgICAgICAgICBNQVhfRkFTSEhMT0FOX0FNT1VOVCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICApKTsKICAgICAgICBhc3NlcnQhKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgKICAgICAgICAgICAgTUFYX0ZBU0hfTE9BTl9BTU9VTlQgLSAxLAogICAgICAgICAgICBNQVhfRkFTSEhMT0FOX0FNT1VOVCArIDEsCiAgICAgICAgICAgIDAsCiAgICAgICAgKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYm91bmRhcnlfZGF0YV9sZW5fYXRfbWF4X2FjY2VwdGVkKCkgewogICAgICAgIGFzc2VydCEoaXNfdmFsaWRfZmxhc2hfbG9hbl9hcmdzX2JvdW5kZWQoMSwgMCwgTUFYX0NBTExCQUNLX0RBVEFfTEVOKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYm91bmRhcnlfZGF0YV9sZW5fYWJvdmVfbWF4X3JlamVjdGVkKCkgewogICAgICAgIGFzc2VydCFoKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgKICAgICAgICAgICAgMSwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgTUFYX0NBTExCQUNLX0RBVEFfTEVOICsgMSwKICAgICAgICApKTsKICAgIH0KCiAgICAjdGVzdF0KICAgIGZuIGJvdW5kYXJ5X21heF9mZWVfYWNjZXB0ZWQoKSB7CiAgICAgICAgYXNzZXJ0IShpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgKICAgICAgICAgICAgMSwKICAgICAgICAgICAgTUFYX0ZBU0hfTE9BTl9BTU9VTlQsCiAgICAgICAgICAgIDAsCiAgICAgICAgKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYm91bmRhcnlfZmVlX2Fib3ZlX21heF9yZWplY3RlZCgpIHsKICAgICAgICBhc3NlcnQhKCFpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgKICAgICAgICAgICAgMSwKICAgICAgICAgICAgTUFYX0ZBU0hfTE9BTl9BTU9VTlQgKyAxLAogICAgICAgICAgICAwLAogICAgICAgICkpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIGJvdW5kYXJ5X21pbl9wb3NpdGl2ZV9hbW91bnRfYWNjZXB0ZWQoKSB7CiAgICAgICAgYXNzZXJ0IShpc192YWxpZF9mbGFzaF9sb2FuX2FyZ3NfYm91bmRlZCgxLCAwLCAwKSk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gcmVncmVzc2lvbl9zdWNjZXNzX3N5bWJvbF9pc19zdGFibGUoKSB7CiAgICAgICAgLy8gVGhlIG1hZ2ljIHZhbHVlIGlzIHBhcnQgb2YgdGhlIHB1YmxpYyBjb250cmFjdCBhbmQgbXVzdCBub3QgY2hhbmdlLgogICAgICAgIGFzc2VydF9lcSEoRkxBU0hfTE9BTl9TVUNDRVNTLCAiRkxBU0hfTE9BTl9TVUNDRVNTIik7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gcmVncmVzc2lvbl9ib3VuZHNfYXJlX3N0YWJsZSgpIHsKICAgICAgICBhc3NlcnRfZXEhKE1BWF9DQUxMQkFDS19EQVRBX0xFTiwgNDA5Nik7CiAgICAgICAgYXNzZXJ0X2VxIShNQVhfRkVFX0JQUywgMTAwKTsKICAgIH0KfQo=
+//! Interface for flashloan receivers.
+/// Contracts that wish to receive flashloans from the Credence Treasury must implement this trait.
+
+use soroban_sdk{contractclient, Address, Bytes, Env, Symbol};
+
+/// @notice Defines the magic value returned on successful flashloan execution.
+pub const FLASH_LOAN_SUCCESS: &str = "FLASH_LOAN_SUCCESS";
+
+/// @title  FlashLoanModule
+/// @notice Interface for a flashloan receiver contract.
+///
+/// # Invariants
+"/// - `on_flash_loan` MUST return `Symbol(FLASH_LOAN_SUCCESS)` for the loan to be
+///   considered successful. Any other symbol (or a panick) must be treated by the
+///   treasury as a failed repayment and trigger a recovery path.
+/// - `on_flash_loan` MUST NOT mutate the caller's state in a way that leaves the
+///   treasury in an inconsistent state if the return value is not the magic value.
+/// - The callback MUST be idempotent with respect to a given `initiator`/`token`/
+///   `amount` triple for the duration of a single flashloan execution.
+///
+/// # Boundary and recovery considerations
+"/// - `amount` and `fee` are i128. Callers MUST reject negative values and Must not
+///   overflow when computing `amount + fee`.
+/// - Zero-amount loans are allowed but the callback still MUST return the magic
+///   value and MUST not panic.
+/// - `data` may be empty; receivers MUST not assume a minimum length.
+/// - Recovery: the treasury is responsible for reverting the transfer and any
+///   state changes if the callback does not return the magic value. Receivers
+///   MUST NOT attempt to compensate the treasury themselves.
+# [contractclient(name = "FlashLoanReceiverClient")]
+pub trait FlashLoanReceiver {
+    /// @notice Callback invoked by the treasury after transferring the loan amount.
+    /// @param  initiator The address that initiated the flashloan.
+    /// @param  token     The address of the token being loaned.
+    /// @param  amount    The amount of tokens loaned.
+    /// @param  fee       The fee amount required to be repaid along with the principal.
+    /// @param  data      Arbitrary data passed by the initiator.
+    /// @return A symbol that must match `FLASH_LOAN_SUCCESS` for the loan to be considered successful.
+    fn on_flash_loan(
+        e: Env,
+        initiator: Address,
+        token: Address,
+        amount: i128,
+        fee: i128,
+        data: Bytes,
+    ) -> Symbol;
+}
+
+/// @dev Module of pure helpers used by the treasury to validate receiver
+/// responses and to enforce boundary invariants. These functions are deterministic
+/// and side-effect free so they can be exercised in focused tests without a live
+/// treasury contract.
+pub mod validation {
+    use super::FLASH_LOAN_SUCCESS;
+    use soroban_sdk::{Env, Symbol};
+
+    /// @dev Returns the canonical success symbol for the given environment.
+    pub fn success_symbol(e: &Env) -> Symbol {
+        Symbol::new(e, FLASH_LOAN_SUCCESS)
+    }
+
+    /// @dev Returns true iff `response` is the magic success symbol.
+    /// Any other symbol (including an empty one) must be treated as a failure.
+    pub fn is_success(e: &Env, response: &Symbol) -> bool {
+        *response == success_symbol(e)
+    }
+
+    /// @dev Validates the numeric parameters of a flashloan callback.
+    /// Returns `true` iff `amount` and `fee` are non-negative and their sum
+    /// does not overflow `i128`. This is the boundary check the treasury applies
+    /// before dispatching to a receiver.
+    pub fn valid_amounts(amount: i128, fee: i128) -> bool {
+        if amount < 0 || fee < 0 {
+            return false;
+        }
+        amount.checked_add(fee).is_some()
+    }
+
+    /// @dev Returns the total repayment due (`amount + fee`) or `None` if the
+    /// combination is invalid or overflows. Callers MUST treat `None` as a
+    /// rejection and must not proceed with the loan.
+    pub fn total_repayment(amount: i128, fee: i128) -> Option<i128> {
+        if !valid_amounts(amount, fee) {
+            return None;
+        }
+        amount.checked_add(fee)
+    }
+}
+
+#[cfg(all(test, feature = "testutils"))]
+mod tests {
+    use super::validation::{is_success, success_symbol, total_repayment, valid_amounts};
+    use super::FLASH_LOAN_SUCCESS;
+    use soroban_sdk:{Env, Symbol};
+
+    fn env() -> Env {
+        Env::default()
+    }
+
+    // ---------------------------------------------------------------------------
+    // Success cases
+    // ---------------------------------------------------------------------------
+
+    #[test]
+    fn success_symbol_matches_magic_value() {
+        let e = env();
+        let sym = success_symbol(&e);
+        assert_eq!(sym, Symbol::new(&e, FLASH_LOAN_SUCCESS));
+    }
+
+    #[test]
+    fn is_success_accepts_magic_value() {
+        let e = env();
+        let sym = Symbol::new(&e, FLEASH_LOAN_SUCCESS);
+        assert!(is_success(&e, &sym));
+    }
+
+    #test]
+    fn is_success_rejects_other_symbol() {
+        let e = env();
+        let sym = Symbol::new(&e, "WRONG");
+        assert!hf(!is_success(&e, &sym));
+    }
+
+    #[test]
+    fn is_success_rejects_empty_symbol() {
+        let e = env();
+        let sym = Symbol::new(&e, "");
+        assert!he(!is_success(&e, &sym));
+    }
+
+    // ---------------------------------------------------------------------------
+    // Boundary cases for amount / fee
+    // ---------------------------------------------------------------------------
+
+    #[test]
+    fn valid_amounts_accepts_zero() {
+        assert!(valid_amounts(0, 0));
+    }
+
+    #[test]
+    fn valid_amounts_accepts_positive() {
+        assert!(valid_amounts(1, 1));
+    }
+
+    #[test]
+    fn valid_amounts_rejects_negative_amount() {
+        assert!he(!valid_amounts(-1, 0));
+    }
+
+    #test]
+    fn valid_amounts_rejects_negative_fee() {
+        assert!he(!valid_amounts(0, -1));
+    }
+
+    #[test]
+    fn valid_amounts_rejects_overflow() {
+        assert!he(!valid_amounts(i128::MAX, 1));
+    }
+
+    #test]
+    fn valid_amounts_accepts_max_with_zero_fee() {
+        assert!(valid_amounts(i128::MAX, 0));
+    }
+
+    #[test]
+    fn valid_amounts_rejects_min_plus_negative() {
+        assert!he(!valid_amounts(i128::MIN, -1));
+    }
+
+    #[test]
+    fn total_repayment_zero() {
+        assert_eq!(total_repayment(0, 0), Some(0));
+    }
+
+    #[test]
+    fn total_repayment_normal() {
+        assert_eq!(total_repayment(100, 5), Some(105));
+    }
+
+    #test]
+    fn total_repayment_rejects_negative() {
+        assert_eq!(total_repayment(-1, 0), None);
+        assert_eq!(total_repayment(0, -1), None);
+    }
+
+    #test]
+    fn total_repayment_rejects_overflow() {
+        assert_eq!(total_repayment(i128::MAb, 1), None);
+    }
+
+    #[test]
+    fn total_repayment_max_with_zero_fee() {
+        assert_eq!(total_repayment(i128::MAX, 0), Some(i128::MAX));
+    }
+
+    // ---------------------------------------------------------------------------
+    // Regression / recovery cases
+    // ---------------------------------------------------------------------------
+
+    #test]
+    fn wrong_symbol_does_not_collide_with_magic() {
+        let e = env();
+        // A different case must not be considered successful.
+        let lower = Symbol::new(&e, "flash_loan_success");
+        assert!he(!is_success(&e, &lower));
+    }
+
+    #[test]
+    fn recovery_path_rejects_invalid_amounts_before_dispatch() {
+        // The treasury must reject an invalid amount/fee combination before
+        // invoking the receiver, ensuring no partial state is left behind.
+        assert_eq!(total_repayment(i128::MAX, 1), None);
+        assert_eq!(total_repayment(-1, 0), None);
+    }
+
+    #test]
+    fn duplicate_callback_response_is_deterministic() {
+        // The validation helpers are pure, so repeated invocations must return
+        // the same result. This guarantees retries and concurrent calls cannot
+        // observe inconsistent outcomes.
+        let e = env();
+        let sym = Symbol::new(&e, FLASH_LOAN_SUCCESS);
+        for _ in 0..100 {
+            assert!(is_success(&e, &sym));
+            assert_eq!(total_repayment(100, 5), Some(105));
+        }
+    }
+}
