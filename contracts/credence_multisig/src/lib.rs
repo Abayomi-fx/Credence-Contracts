@@ -40,7 +40,6 @@
 /// The domain is a human-readable string that uniquely identifies this contract
 /// within the Credence system. It should be included in the signed payload hash
 /// along with other payload fields (nonce, deadline, etc.).
-#[allow(dead_code)]
 const SIGNATURE_DOMAIN: &str = "CredenceMultisig";
 
 pub mod multisig;
@@ -54,6 +53,8 @@ pub use multisig::*;
 #[cfg(test)]
 extern crate std;
 
+#[cfg(test)]
+mod boundary_recovery_tests;
 #[cfg(test)]
 mod boundary_recovery_tests;
 #[cfg(test)]

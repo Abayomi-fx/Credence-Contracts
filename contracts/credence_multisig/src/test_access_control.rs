@@ -28,6 +28,9 @@
 //! | `unpause`                 | pause signer/admin | Via pausable module            |
 //! | `get_*` (read-only)       | anyone             | Permissionless views           |
 
+extern crate alloc;
+extern crate std;
+
 use crate::*;
 use soroban_sdk::testutils::Address as _;
 use soroban_sdk::{Address, BytesN, Env, IntoVal, Val, Vec};
@@ -257,15 +260,15 @@ fn test_submit_proposal_rejects_non_signer() {
             contract: &client.address,
             fn_name: "submit_proposal",
             args: (
-                &attacker,
+                attacker.clone(),
                 ActionType::ContractCall,
-                None::<Address>,
+                Some(target.clone()),
                 None::<soroban_sdk::String>,
-                None::<soroban_sdk::Bytes>,
-                description.clone(),
+                Some(calldata.clone()),
+                soroban_sdk::String::from_str(&env, "Unauthorized call"),
                 0_u64,
                 None::<soroban_sdk::String>,
-                op_hash.clone(),
+                BytesN::from_array(&env, &[0; 32]),
             )
                 .into_val(&env),
             sub_invokes: &[],
@@ -276,13 +279,13 @@ fn test_submit_proposal_rejects_non_signer() {
         client.submit_proposal(
             &attacker,
             &ActionType::ContractCall,
+            &Some(target),
             &None,
+            &Some(calldata),
+            &soroban_sdk::String::from_str(&env, "Unauthorized call"),
+            &0,
             &None,
-            &None,
-            &description,
-            &0_u64,
-            &None,
-            &op_hash,
+            &BytesN::from_array(&env, &[0; 32]),
         );
     }));
     assert!(res.is_err(), "submit_proposal must reject non-signer");
@@ -300,13 +303,13 @@ fn test_submit_proposal_succeeds_as_signer() {
     let proposal_id = client.submit_proposal(
         &signer,
         &ActionType::ContractCall,
+        &Some(target),
         &None,
+        &Some(calldata),
+        &soroban_sdk::String::from_str(&env, "Authorized call"),
+        &0,
         &None,
-        &None,
-        &description,
-        &0_u64,
-        &None,
-        &op_hash,
+        &BytesN::from_array(&env, &[1; 32]),
     );
     let proposal = client.get_proposal(&proposal_id);
     assert_eq!(proposal.proposer, signer);
