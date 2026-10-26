@@ -203,10 +203,7 @@ fn hash_binds_all_fields() {
         client.hash_call(&target.address, &func, &args, &other_salt)
     );
     // Same inputs hash identically.
-    assert_eq!(
-        base,
-        client.hash_call(&target.address, &func, &args, &salt)
-    );
+    assert_eq!(base, client.hash_call(&target.address, &func, &args, &salt));
 }
 
 #[test]
@@ -238,7 +235,13 @@ fn queue_call_requires_admin() {
     let func = Symbol::new(&env, "set_value");
     let args = args_u32(&env, 7);
 
-    let res = client.try_queue_call(&stranger, &target.address, &func, &args, &min_delay_seconds());
+    let res = client.try_queue_call(
+        &stranger,
+        &target.address,
+        &func,
+        &args,
+        &min_delay_seconds(),
+    );
     assert!(res.is_err(), "only the admin may queue calls");
 }
 

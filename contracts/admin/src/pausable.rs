@@ -131,7 +131,7 @@ fn require_matching_admin_epoch(e: &Env, action: PauseAction, ep: u64) {
 fn require_matching_admin_epoch_with_logging(e: &Env, action: PauseAction, ep: u64) -> Result<(), ()> {
     let expected_id = derive_proposal_id(e, action);
     let current_epoch = e.ledger().sequence() / PROPOSAL_EPOCH_SIZE;
-    
+
     if ep != expected_id {
         // Log detailed mismatch information for diagnostics
         e.events().publish(
@@ -460,7 +460,12 @@ pub fn execute_pause_proposal(e: &Env, proposal_id: u64) {
             );
         }
         Err(_) => {
-            PauseObservability::log_error_context(e, "stale_admin_epoch", proposal_id, current_epoch as u32);
+            PauseObservability::log_error_context(
+                e,
+                "stale_admin_epoch",
+                proposal_id,
+                current_epoch as u32,
+            );
             panic_with_error!(e, ContractError::StaleAdminEpoch);
         }
     }
