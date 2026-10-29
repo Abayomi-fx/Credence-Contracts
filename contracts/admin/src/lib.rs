@@ -20,6 +20,7 @@
 // is the only mode where this deny fires (tests
 // stay free to use format!/write! for diagnostics).
 #![cfg_attr(not(test), deny(clippy::disallowed_macros))]
+#![allow(unreachable_patterns)]
 
 //! # Serialization and retry contract
 //!
@@ -72,23 +73,7 @@ use soroban_sdk::{
 
 /// Signature domain identifier for the Admin contract.
 ///
-/// This constant binds signatures to this specific contract, preventing
-/// cross-contract replay attacks where a signature intended for one contract
-/// could be replayed against another. Each contract in the Credence system
-/// has a unique signature domain constant.
-///
-/// # Security
-///
-/// Without domain separation, a signature created for contract A could be
-/// replayed against contract B if both contracts share the same nonce namespace
-/// and signature verification logic. By including this domain in the signed
-/// payload hash, we ensure signatures are only valid for their intended contract.
-///
-/// # Value
-///
-/// The domain is a human-readable string that uniquely identifies this contract
-/// within the Credence system. It should be included in the signed payload hash
-/// along with other payload fields (nonce, deadline, etc.).
+/// Binds signatures to this specific contract to prevent cross-contract replay.
 #[allow(dead_code)]
 const SIGNATURE_DOMAIN: &str = "Admin";
 
@@ -999,7 +984,7 @@ impl AdminContract {
             panic_with_error!(&e, ContractError::TimelockNotReady);
         }
 
-// Revalidate the pending owner's effective SuperAdmin status at
+        // Revalidate the pending owner's effective SuperAdmin status at
         // acceptance time. The candidate's role, activation, or suspension
         // state may have changed during the timelock window; a stale proposal
         // must never grant durable ownership to an admin who is no longer an

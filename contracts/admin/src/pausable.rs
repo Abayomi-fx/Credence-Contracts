@@ -122,16 +122,20 @@ fn require_matching_admin_epoch(e: &Env, action: PauseAction, ep: u64) {
 }
 
 /// Enhanced epoch validation with detailed logging for diagnostics.
-/// 
+///
 /// # Deterministic validation with observability
 /// * Validates proposal ID was derived from current epoch
 /// * Provides detailed diagnostic information on mismatch
 /// * Logs context for operational monitoring
-/// 
+///
 /// # Returns
 /// * `Ok(())` if epoch validation passes
 /// * `Err(())` if validation fails (caller should panic with appropriate error)
-fn require_matching_admin_epoch_with_logging(e: &Env, action: PauseAction, ep: u64) -> Result<(), ()> {
+fn require_matching_admin_epoch_with_logging(
+    e: &Env,
+    action: PauseAction,
+    ep: u64,
+) -> Result<(), ()> {
     let expected_id = derive_proposal_id(e, action);
     let current_epoch = e.ledger().sequence() / PROPOSAL_EPOCH_SIZE;
 
@@ -144,7 +148,7 @@ fn require_matching_admin_epoch_with_logging(e: &Env, action: PauseAction, ep: u
         );
         return Err(());
     }
-    
+
     // Log successful epoch validation
     soroban_sdk::log!(e, "pause_epoch_validation_passed", (ep, current_epoch));
 
@@ -481,17 +485,13 @@ pub fn execute_pause_proposal(e: &Env, proposal_id: u64) {
     let state_change_needed = current_pause_state != desired_pause_state;
 
     if !state_change_needed {
-        PauseObservability::log_idempotent_execution(
-            e, 
-            proposal_id, 
-            "state_already_desired"
-        );
+        PauseObservability::log_idempotent_execution(e, proposal_id, "state_already_desired");
     }
 
     // ── Configuration Consistency Verification ──────────────────────────────
     // Verify pause configuration integrity and state coherence
     require_coherent_pause_state(e, proposal_id);
-    
+
     let threshold: u32 = e
         .storage()
         .instance()

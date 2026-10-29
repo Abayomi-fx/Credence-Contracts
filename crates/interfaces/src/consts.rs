@@ -54,7 +54,7 @@ pub const ERR_INVALID_INPUT: &str = "invalid_input";
 /// long keys before they touch persistent state. It is deterministic
 /// and has no side effects.
 pub fn is_valid_key_len(len: usize) -> bool {
-    len >= MIN_KEY_LEN && len <= MAX_KEY_LEN
+    (MIN_KEY_LEN..=MAX_KEY_LEN).contains(&len)
 }
 
 /// Returns true if the provided value length is within the accepted bounds.
@@ -75,7 +75,7 @@ pub fn is_valid_batch_size(size: usize) -> bool {
 /// Returns true if the cache entry age is within the freshness window.
 ///
 /// An entry exactly at the age limit is considered fresh; only ages
-/// strictly greater than `MAX_CACHE_AGP_SECS` are stale.
+/// strictly greater than `MAX_CACHE_AGE_SECS` are stale.
 pub fn is_cache_fresh(age_secs: u64) -> bool {
     age_secs <= MAX_CACHE_AGE_SECS
 }

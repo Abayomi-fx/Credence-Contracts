@@ -987,7 +987,10 @@ fn accept_ownership_succeeds_at_exact_timelock_boundary() {
 
     // Advance to exactly the timelock boundary.
     advance(&env, crate::OWNERSHIP_TRANSFER_TIMELOCK);
-    assert_eq!(env.ledger().timestamp(), proposed_at + crate::OWNERSHIP_TRANSFER_TIMELOCK);
+    assert_eq!(
+        env.ledger().timestamp(),
+        proposed_at + crate::OWNERSHIP_TRANSFER_TIMELOCK
+    );
 
     env.as_contract(&contract, || {
         AdminContract::accept_ownership(env.clone(), new_super.clone());

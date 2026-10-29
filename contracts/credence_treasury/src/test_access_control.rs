@@ -260,7 +260,8 @@ fn get_privileged_cases() -> alloc::vec::Vec<PrivilegedCase> {
                         sub_invokes: &[],
                     },
                 }]);
-                client.transfer_admin(&new_admin);            },
+                client.transfer_admin(&new_admin);
+            },
         },
         PrivilegedCase {
             name: "set_pause_signer",
